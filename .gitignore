@@ -1,0 +1,26 @@
+# Runtime logs and the poisoned-id blacklist: real request/response traffic,
+# session ids and relay error bodies. Never publish these.
+logs/
+
+# Local relay list. Holds the relay API key in plaintext.
+# Absent on a fresh clone; the app falls back to a built-in default and the
+# control panel writes it on first save.
+relays.json
+relays.json.corrupt-*
+
+# Captured upstream payload kept for hand debugging. Real conversation content.
+msgcase.json
+
+node_modules/
+
+# Local AI dev harness: per-developer journals, task PRDs, agent hooks.
+# Not part of the tool.
+.trellis/
+.zcode/
+AGENTS.md
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp

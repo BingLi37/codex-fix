@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Codex ID 修复代理 · 控制台</title>
+<link rel="stylesheet" href="/dashboard-fallback.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span id="lamp" class="lamp lamp-unknown" aria-hidden="true"></span>
+    <div>
+      <h1>Codex ID 修复代理</h1>
+      <p class="sub">把 <code>custom_tool_call</code> 的 id 前缀实时改成 <code>ctc_</code>，防止会话卡死</p>
+    </div>
+  </div>
+  <div class="state">
+    <strong id="stateText" aria-live="polite">正在检测…</strong>
+    <span id="stateMeta" class="meta"></span>
+  </div>
+</header>
+
+<section class="controls" aria-label="操作">
+  <button id="btnStart" class="btn btn-go">启动</button>
+  <button id="btnStop" class="btn btn-stop">停止</button>
+  <button id="btnRestart" class="btn">重启</button>
+  <span class="divider" role="separator"></span>
+  <button id="btnSelftest" class="btn btn-quiet">运行自检</button>
+  <button id="btnScan" class="btn btn-quiet">扫描历史会话</button>
+  <button id="btnRepair" class="btn btn-quiet">修复历史会话</button>
+  <span class="grow"></span>
+  <label class="toggle"><input type="checkbox" id="autoscroll" checked> 自动滚动</label>
+  <button id="btnClear" class="btn btn-quiet">清空视图</button>
+</section>
+
+<div id="banner" class="banner" hidden></div>
+
+<section class="cards" aria-label="统计">
+  <div class="card"><span class="card-label">已处理请求</span><strong id="mRequests">–</strong></div>
+  <div class="card card-fix"><span class="card-label">已修正 id</span><strong id="mIds">–</strong></div>
+  <div class="card card-fix"><span class="card-label">已同步引用</span><strong id="mRefs">–</strong></div>
+  <div class="card"><span class="card-label">最近一次修正</span><strong id="mLast">–</strong></div>
+  <div class="card"><span class="card-label">运行时长</span><strong id="mUptime">–</strong></div>
+  <div class="card" id="wiringCard"><span class="card-label">Codex 接入状态</span><strong id="mWiring">–</strong></div>
+</section>
+
+<main class="panes">
+  <section class="pane pane-stream">
+    <div class="pane-head">
+      <h2>实时工作流</h2>
+      <div class="filters" role="group" aria-label="筛选事件">
+        <button class="chip chip-on" data-filter="all">全部</button>
+        <button class="chip" data-filter="fix">修正</button>
+        <button class="chip" data-filter="error">错误</button>
+        <button class="chip" data-filter="traffic">请求</button>
+      </div>
+    </div>
+    <ol id="stream" class="stream" aria-live="polite"></ol>
+    <p id="streamEmpty" class="empty">还没有事件。代理运行后，Codex 每次请求都会在这里出现。</p>
+  </section>
+
+  <aside class="pane pane-side">
+    <div class="pane-head"><h2>错误详情</h2><button id="btnClearErrors" class="chip">清空</button></div>
+    <div id="errors" class="errors"></div>
+    <p id="errorsEmpty" class="empty ok">暂无错误。</p>
+  </aside>
+</main>
+
+<dialog id="modal">
+  <h3 id="modalTitle">输出</h3>
+  <pre id="modalBody"></pre>
+  <form method="dialog"><button class="btn">关闭</button></form>
+</dialog>
+
+<script src="/dashboard-fallback.js"></script>
+</body>
+</html>

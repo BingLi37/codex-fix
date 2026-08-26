@@ -1,0 +1,14 @@
+@import "@heroui/styles";
+@import "./fonts.css";
+
+/* Override HeroUI's default families so every surface uses the project fonts.
+   These faces have no CJK glyphs, so a system Chinese font follows each stack. */
+@theme {
+  --font-sans: 'iA Writer Quattro S', 'IBM Plex Sans', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-mono: 'Lilex', 'Consolas', ui-monospace, monospace;
+  --font-serif: 'IBM Plex Serif', 'Microsoft YaHei', serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
