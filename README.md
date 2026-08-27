@@ -1,3 +1,5 @@
+[![lao1.me](https://img.shields.io/badge/lao1.me%20%7C%20%E6%96%B0%E6%97%B6%E4%BB%A3%E4%BA%A4%E6%B5%81%E7%A4%BE%E5%8C%BA-4CAF50?style=for-the-badge&logo=globe&logoColor=white)](https://lao1.me)
+
 # Codex ID 修复代理
 
 **中文** · [English](README.en.md)
@@ -57,6 +59,8 @@ base_url = "http://127.0.0.1:7801/v1"
 ## 用法
 
 双击 `启动控制面板.cmd`，浏览器会打开 <http://127.0.0.1:7800>。
+
+![控制面板](docs/panel.png)
 
 界面上可以：启动/停止/重启代理、换中转站、看它是否在工作、看实时工作流（每次修正都显示
 `坏id → 好id`）、看错误详情（含中转站返回的原文）、运行自检、扫描或修复历史会话文件。

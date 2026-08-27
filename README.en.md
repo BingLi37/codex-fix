@@ -1,3 +1,5 @@
+[![lao1.me](https://img.shields.io/badge/lao1.me%20%7C%20%E6%96%B0%E6%97%B6%E4%BB%A3%E4%BA%A4%E6%B5%81%E7%A4%BE%E5%8C%BA-4CAF50?style=for-the-badge&logo=globe&logoColor=white)](https://lao1.me)
+
 # Codex ID-Sanitizing Proxy
 
 [中文](README.md) · **English**
@@ -69,6 +71,8 @@ background without opening the UI.
 ## Usage
 
 Double-click `启动控制面板.cmd`; the browser opens <http://127.0.0.1:7800>.
+
+![Control panel](docs/panel.png)
 
 From the panel: start/stop/restart the proxy, switch relays, see whether it is
 working, watch the live event stream (every repair shows `bad id → good id`),
