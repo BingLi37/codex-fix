@@ -231,7 +231,7 @@ Re-measure it yourself with `node bench.mjs`.
 | `bench.mjs` | benchmark |
 | `ui/` | HeroUI + React dashboard source; `ui/dist` is the committed build |
 | `ui/src/App.test.jsx` | UI interaction tests, 24 cases |
-| `ui/src/promo-card.js` | the promo card in the bottom-right corner. Don't want it? Delete this file and its import in `ui/src/main.jsx` |
+| `ui/src/promo-card.js` | the promo card in the bottom-right corner |
 | `dashboard-fallback.*` | dependency-free simple dashboard, used automatically when `ui/dist` is missing |
 | `启动控制面板.cmd` | entry point: starts the panel if it isn't up, then opens the browser |
 | `autostart-hidden.vbs` | starts the panel with no console window; locates the project dir and node itself |
@@ -284,3 +284,13 @@ Environment variables:
 - To back all of this out: point `base_url` in `config.toml` back at the relay and
   delete the shortcut from your Startup folder.
 - `ui/node_modules` is ~300MB and only needed for UI work.
+
+## License
+
+The code is MIT — see `LICENSE`.
+
+The fonts under `ui/public/fonts` (and the build copy in `ui/dist/fonts`) are
+third-party Font Software and are **not** covered by the MIT license: iA Writer
+Quattro S, IBM Plex and Lilex are all distributed under the SIL Open Font
+License 1.1. The copyright notices and full license text are in
+`ui/public/fonts/LICENSE.txt`, which must travel with the font files.

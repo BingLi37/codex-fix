@@ -192,7 +192,7 @@ Base URL 的路径会自动映射：Codex 请求 `/v1/responses`，若中转站�
 | `bench.mjs` | 性能压测 |
 | `ui/` | HeroUI + React 界面源码，`ui/dist` 是构建产物（已入库） |
 | `ui/src/App.test.jsx` | 界面交互测试，24 个用例 |
-| `ui/src/promo-card.js` | 右下角的推广卡片。不想要就删掉这个文件和 `ui/src/main.jsx` 里的那行 import |
+| `ui/src/promo-card.js` | 右下角的推广卡片 |
 | `dashboard-fallback.*` | 无依赖的简易界面，`ui/dist` 缺失时自动启用 |
 | `启动控制面板.cmd` | 入口：面板没起就先起，再开浏览器 |
 | `autostart-hidden.vbs` | 无窗口启动面板，自己定位项目目录和 node |
@@ -240,3 +240,11 @@ cd ui && npm run build                   # 改完界面后必须重新构建
 - 前缀按类型分别修，`reasoning` 视有无 `encrypted_content` 决定改前缀还是去掉 id。
 - 想彻底退回原状：把 `config.toml` 的 `base_url` 改回中转站地址，删掉 Startup 里的快捷方式。
 - `ui/node_modules` 约 300MB，只有改界面才需要装。
+
+## 许可
+
+代码是 MIT，见 `LICENSE`。
+
+`ui/public/fonts/`（以及构建产物 `ui/dist/fonts/`）里的字体是第三方 Font Software，
+**不在 MIT 范围内**：iA Writer Quattro S、IBM Plex、Lilex 均按 SIL Open Font License 1.1
+分发。版权声明和许可原文在 `ui/public/fonts/LICENSE.txt`，随字体一起分发即可。

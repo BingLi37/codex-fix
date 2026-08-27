@@ -1,5 +1,5 @@
-/* Fonts copied from the valocrosshub project. Declarations match its
-   apps/frontend/src/app/fonts.css so the families render identically. */
+/* Self-hosted so the panel renders identically offline and on first paint.
+   Third-party fonts under OFL 1.1 — see public/fonts/LICENSE.txt. */
 
 /* iA Writer Quattro S: body and interface copy. */
 @font-face {
